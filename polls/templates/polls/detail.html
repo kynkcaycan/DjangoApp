@@ -1,6 +1,27 @@
-<h1>{{ question.question_text }}</h1>
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }}</li>
-{% endfor %}
-</ul>
+<form action="{% url 'polls:vote' question.id%}" method="post">
+
+
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>{{ question.question_text }}</h1></legend>
+        {% comment %} legen ile çercevenin üstüne yazar {% endcomment %}
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+
+
+        {% comment %} choice_set  değişken değil ilişkisel bir sorgu adı {% endcomment %}
+        {% for choice in question.choice_set.all %}
+           {% comment %} forloop.counter 1 den başlayıp artan sayaç {% endcomment %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+        {% endfor %}
+  
+
+    {% comment %}fieldset etrafa çerçeve saplar  {% endcomment %}
+    <p></p>
+    <p></p>
+    <input type="submit" value="Vote">
+    <p></p>
+    </fieldset>
+    </form>
+    {% comment %} hangi soru seçiliyse onun oylama sayfası açılır yapılan seçim bir yere gönderilmelidir sayfa soru id sine göre açılmalıdır {% endcomment %}
