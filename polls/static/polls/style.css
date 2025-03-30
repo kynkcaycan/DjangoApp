@@ -1,0 +1,90 @@
+/* Sayfanın genel görünümü */
+body {
+    background-color: #f4f7fc;
+    /* Hafif pastel bir arka plan rengi */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Fieldset stilini düzenleme */
+fieldset {
+    background-color: #ffffff;
+    /* Beyaz arka plan */
+    border: 1px solid #e0e0e0;
+    /* Hafif gri bir kenarlık */
+    border-radius: 10px;
+    /* Köşe yuvarlama */
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    /* Ortalar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge efekti */
+}
+
+/* Legend başlık stilini düzenleme */
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a5298;
+    /* Başlık için hoş bir renk */
+    text-align: center;
+    /* Başlık ortalanır */
+    margin-bottom: 15px;
+}
+
+/* Liste stilini düzenleme */
+ul {
+    padding-left: 20px;
+    list-style-type: none;
+    /* Madde işaretlerini kaldırır */
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Linklerin görünümü */
+a {
+    text-decoration: none;
+    /* Altını çizmez */
+    color: #1e3c72;
+    /* Link rengi */
+    font-size: 18px;
+    transition: color 0.3s ease;
+    /* Hover efekti için geçiş */
+}
+
+/* Link hover efekti */
+a:hover {
+    color: #ff9800;
+    /* Hover durumunda renk değişir */
+    text-decoration: underline;
+    /* Altını çizer */
+}
+
+/* Mesajlar için stil */
+p {
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    /* Yeşil arka plan */
+    color: white;
+    /* Beyaz yazı rengi */
+    padding: 10px 20px;
+    /* İç boşluk */
+    border: none;
+    /* Kenarlık yok */
+    border-radius: 5px;
+    cursor: pointer;
+    /* Fare ile üzerine gelince el işareti çıkar */
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
